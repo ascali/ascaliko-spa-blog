@@ -1,0 +1,101 @@
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.shadow { 
+   color: white; 
+   font: bold 51px monospace, Helvetica, Arial, Serif;
+   text-shadow: 1px 1px red, 
+                2px 2px red, 
+                3px 3px red;
+   -webkit-transition: all 0.12s ease-out;
+   -moz-transition:    all 0.12s ease-out;
+   -ms-transition:     all 0.12s ease-out;
+   -o-transition:      all 0.12s ease-out;
+}
+.shadow:hover {
+   position: relative; 
+   top: -3px; 
+   left: -3px; 
+   text-shadow: 1px 1px red, 
+                2px 2px red, 
+                3px 3px blue, 
+                4px 4px blue, 
+                5px 5px orange, 
+                6px 6px orange;
+}
+
+h4 {
+  font-family: "Alice";
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 0.5em 0;
+    padding: 0;
+}
+
+a.list-post, a {
+  text-decoration: none;
+}
+
+a.menu {
+  font-family: "Alice";
+  font-size: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}
+a.menu:link {
+  color: #222222;
+}
+a.menu:visited {
+  color: grey;
+}
+a.menu:hover {
+  color: #ff3300;
+}
+
+a.footer {
+  font-family: "Alice";
+  font-size: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}
+a.footer:link {
+  color: #222222;
+}
+a.footer:visited {
+  color: grey;
+}
+a.footer:hover {
+  color: #ff3300;
+}
+
+
+.list-post {
+  color: #222222;
+}
+/*
+a.footer:hover {
+  color: #cc0000;
+}*/
