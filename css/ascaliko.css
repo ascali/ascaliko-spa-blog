@@ -99,3 +99,9 @@ a.footer:hover {
 a.footer:hover {
   color: #cc0000;
 }*/
+
+/*--*/
+.hidden {
+  display: none !important;
+}
+/* -- */
