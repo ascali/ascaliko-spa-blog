@@ -105,3 +105,10 @@ a.footer:hover {
   display: none !important;
 }
 /* -- */
+
+.u-img-responsive {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto; 
+}
