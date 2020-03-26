@@ -98,6 +98,7 @@ function get_blog_dev() {
     dataType: "JSON",
     success: function( response ) {
       console.log('the page was loaded', response);
+      $('#list-blog').html(" ");
       var list_blog = "";
       for (var i = response.length - 1; i >= 0; i--) {
         list_blog += `<li><a class="list-post" href="${response[i].canonical_url}" target="_blank">${response[i].readable_publish_date} - <b>${response[i].title}</b></a></li>`;
