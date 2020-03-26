@@ -77,10 +77,35 @@ function callPage(pageRefInput) {
     success: function( response ) {
       // console.log('the page was loaded', response);
       $('.content').html(response);
+      if ($('#blog').length==1) {
+        get_blog_dev();
+      }
     },
     error: function( error ) {
       console.log('the page wasn\'t loaded', error);
-      $('.content').html('the page wasn\'t loaded');
+      $('.content').html('the page wasn\'t loaded, sorry try again and check your internet connection!');
+    },
+    complete: function( xhr, status ) {
+      // console.log('the request is complete');
+    },
+  });
+}
+
+function get_blog_dev() {
+  $.ajax({
+    url: `https://dev.to/api/articles?username=ascaliko`,
+    type: "GET",
+    dataType: "JSON",
+    success: function( response ) {
+      console.log('the page was loaded', response);
+      var list_blog = "";
+      for (var i = response.length - 1; i >= 0; i--) {
+        list_blog += `<li><a class="list-post" href="${response[i].canonical_url}" target="_blank">${response[i].readable_publish_date} - <b>${response[i].title}</b></a></li>`;
+      }
+      $('#list-blog').html(list_blog);
+    },
+    error: function( error ) {
+      console.log('the api wasn\'t loaded', error);
     },
     complete: function( xhr, status ) {
       // console.log('the request is complete');
