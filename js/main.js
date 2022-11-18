@@ -61,6 +61,9 @@ $(document).ready(function(){
       callPage(pageRef);
   });
 
+  let isCurrentDate = new Date().getFullYear();
+  $("#current-date").html(isCurrentDate);
+
   /*setTimeout(function () {
       $("#cookieConsent").fadeIn(200);
    }, 4000);
